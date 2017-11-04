@@ -11,7 +11,7 @@ gapminder <- read_csv("data/gapminder.csv")
 ave_life_exp <- gapminder %>% 
   group_by(continent) %>% 
   summarize(
-    avglifeexp <- mean(lifeExp)
+    avglifeexp = mean(lifeExp)
   )
 
 #2 lefe exp by year for Canada
@@ -20,3 +20,12 @@ ave_life_exp <- gapminder %>%
 life_exp_canada <- gapminder %>% 
   filter(country=="Canada") %>% 
   select(year, lifeExp)
+
+#get the mean gdp per condinent for 1972
+
+mean_gdp_1972 <- gapminder %>% 
+  group_by(continent) %>% 
+  filter(year==1972) %>% 
+  summarize(
+    avegdp = mean(gdpPercap)
+  )
