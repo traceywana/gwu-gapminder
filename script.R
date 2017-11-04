@@ -1,7 +1,5 @@
-#DL tidyverse packages
 library(tidyverse)
-
-#DL file from website
+#hi
 download.file("http://fmichonneau.github.io/2017-11-03-gwu/gapminder.csv",
               "data/gapminder.csv")
 
@@ -31,3 +29,12 @@ mean_gdp_1972 <- gapminder %>%
   summarize(
     avegdp = mean(gdpPercap)
   )
+
+#get pop size for China
+pop_size_china <- gapminder %>% 
+  filter(country == "China") %>% 
+  select(year, pop)
+
+#get max popsize per country for year2007
+
+
