@@ -13,3 +13,10 @@ ave_life_exp <- gapminder %>%
   summarize(
     avglifeexp <- mean(lifeExp)
   )
+
+#2 lefe exp by year for Canada
+
+
+life_exp_canada <- gapminder %>% 
+  filter(country=="Canada") %>% 
+  select(year, lifeExp)
