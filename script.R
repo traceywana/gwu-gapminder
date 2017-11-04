@@ -1,5 +1,5 @@
 library(tidyverse)
-#hi
+
 download.file("http://fmichonneau.github.io/2017-11-03-gwu/gapminder.csv",
               "data/gapminder.csv")
 
