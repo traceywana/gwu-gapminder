@@ -36,5 +36,8 @@ pop_size_china <- gapminder %>%
   select(year, pop)
 
 #get max popsize per country for year2007
-
+pop_size_2007 <- gapminder %>% 
+  filter(year == 2007) %>% 
+  group_by(country) %>% 
+  summarize(max_pop = max(pop))
 
